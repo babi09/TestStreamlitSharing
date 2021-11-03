@@ -31,7 +31,7 @@ from networks_ah import get_denseNet103, get_unet3
 reconMethod = 'SCAN';
 
 def singlePatientDetection(pName, baseline, params, organTarget):
-    write('Step 1')
+    print('Step 1')
    
     return 0
 
