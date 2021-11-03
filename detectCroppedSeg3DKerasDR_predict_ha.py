@@ -39,6 +39,7 @@ def singlePatientDetection(pName, baseline, params, organTarget):
 
     ##### extract input image data (vol4D00)
     vol4D00,_,_,_,_ = funcs_ha_use.readData4(pName,reconMethod,0);
+    st.write('Step 2')
    
     return 0
 
