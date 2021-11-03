@@ -7,6 +7,6 @@ keras==2.4.3
 tensorflow==2.3.4
 scipy
 scikit-image
-sklearn
-scikit-learn
-from sklearn.decomposition import PCA
+sklearn==1.0.1
+scikit-learn=1.0.1
+
