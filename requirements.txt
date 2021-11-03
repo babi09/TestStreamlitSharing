@@ -1,10 +1,10 @@
 streamlit==1.0.0
-matplotlib
-numpy
-SimpleITK
-nibabel
+matplotlib==3.4.3
+numpy==1.18.5
+SimpleITK==2.1.1
+nibabel==3.2.1
 keras==2.4.3
 tensorflow==2.3.4
-scipy
-scikit-image
-scikit-learn==1.0.1
+scipy==1.7.1
+skimage=0.18.3
+sklearn==1.0.1
