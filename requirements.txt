@@ -9,3 +9,4 @@ scipy
 scikit-image
 sklearn
 scikit-learn
+from sklearn.decomposition import PCA
