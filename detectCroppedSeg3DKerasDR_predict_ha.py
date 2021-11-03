@@ -31,15 +31,16 @@ from networks_ah import get_denseNet103, get_unet3
 reconMethod = 'SCAN';
 
 def singlePatientDetection(pName, baseline, params, organTarget):
-    st.write('Step 1')
-    
+
     tDim = params['tDim'];
     deepRed = params['deepReduction'];
     PcUsed = params['PcUsed'];
 
     ##### extract input image data (vol4D00)
     vol4D00,_,_,_,_ = funcs_ha_use.readData4(pName,reconMethod,0);
-    st.write('Step 2')
+    zDimOri = vol4D00.shape[2];
+    # start from baseline      
+    im = vol4D00[:,:,:,baseline:];
    
     return 0
 
