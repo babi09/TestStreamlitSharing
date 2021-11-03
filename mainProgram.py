@@ -77,10 +77,12 @@ if uploaded_nii_file is not None:
     if option == 'Liver':
         # load segmentation model
         # perform segmentation
-        maskSegment = modelDeployment.runDeepSegmentationModel('Liver', img)
+        # maskSegment = modelDeployment.runDeepSegmentationModel('Liver', img)
         # plot segmentation mask
-        fig = funcs_ha_use.plotMask(fig, ax, img, maskSegment, slice_i)
-        #plot = st.pyplot(fig2)
+        # fig = funcs_ha_use.plotMask(fig, ax, img, maskSegment, slice_i)
+
+        #debug
+        modelDeployment.runDeepSegmentationModel('Liver', img)
 
 
 # plot volume
