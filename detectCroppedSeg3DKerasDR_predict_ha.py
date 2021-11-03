@@ -47,7 +47,7 @@ def singlePatientDetection(pName, baseline, params, organTarget):
     # perform PCA to numPC 
     numPC = 5; #50
     pca = PCA(n_components=numPC);
-    vol4D0 = vol4D0[0::5,0::5,:,:]
+    vol4D0 = vol4D0[0::4,0::4,:,:]
     vol4Dvecs=np.reshape(vol4D0, (vol4D0.shape[0]*vol4D0.shape[1]*vol4D0.shape[2], vol4D0.shape[3]));
     PCs=pca.fit_transform(vol4Dvecs);
    
