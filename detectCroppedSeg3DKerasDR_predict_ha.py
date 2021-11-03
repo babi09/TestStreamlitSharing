@@ -41,6 +41,17 @@ def singlePatientDetection(pName, baseline, params, organTarget):
     zDimOri = vol4D00.shape[2];
     # start from baseline      
     im = vol4D00[:,:,:,baseline:];
+    im=im/np.nanmean(im);
+    vol4D0 = np.copy(im);
+    
+    # perform PCA to numPC 
+    numPC = 5; #50
+    pca = PCA(n_components=numPC);
+    vol4Dvecs=np.reshape(vol4D0, (vol4D0.shape[0]*vol4D0.shape[1]*vol4D0.shape[2], vol4D0.shape[3]));
+    PCs=pca.fit_transform(vol4Dvecs);
+    vol4Dpcs=np.reshape(PCs, (vol4D0.shape[0],vol4D0.shape[1],vol4D0.shape[2], numPC));
+    
+    print('Step1')
    
     return 0
 
